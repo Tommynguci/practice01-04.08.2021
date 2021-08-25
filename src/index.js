@@ -17,5 +17,5 @@ app.set('views', path.join(__dirname, 'resources/views'));
 route(app);
 
 app.listen(port, () => {
-  console.log(`Connection successfully!! Address: http://localhost:${port}`);
+  console.log(`Project run in address: http://localhost:${port}`);
 });

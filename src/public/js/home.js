@@ -7,6 +7,10 @@ $(function () {
             $('.me-management-zone').css('display', 'none');
         });
 
+        Search();
+
+        OpenProductDetail();
+
         // Lấy về đường dẫn hiện tại trước khi thực hiện đăng nhập
         // Nếu đăng nhập thành công sẽ quay lại đường dẫn đó
         $('.nav-links .nav-login li:first-child').click(function () { 
@@ -134,7 +138,7 @@ function ScrollTopUnder200(){
 function ScrollTopHigher200() {
     if($(this).scrollTop() >= 200){
         $('.nav-brand a, .nav-content li a, .nav-login li a').css('color', 'rgba(0, 0, 0, 0.7)');
-        $('.nav-container').css('background-color', 'rgba(204, 204, 204, 0.8)');
+        $('.nav-container').css('background-color', 'rgba(255, 255, 255, 0.8)');
         $('.nav-container').css('box-shadow', '0 0px 7px rgba(0, 0, 0, 0.7)');
         $('.nav-login').css('color', 'rgba(0, 0, 0, 0.7)');
         $('.nav-account-zone').css('background-color', '#ddd');
@@ -215,4 +219,26 @@ function LogIn() {
     });
 }
 
+// hàm tìm kiếm
+function Search() {
+    $('.nav-links-logged #nav-logged-search').keyup(function () { 
+        var input_value = $('.nav-links-logged #nav-logged-search').val();
+        if (input_value != null && input_value != '') {
 
+            $('.nav-links-logged .nav-search-result').css('display', 'block');
+            $('.nav-links-logged .nav-search-result-more').text('Xem nhiều kết quả hơn về ' + input_value);
+
+        } else if (input_value == ''){
+
+            $('.nav-links-logged .nav-search-result').css('display', 'none');
+
+        }
+    });
+}
+
+// Mở trang chi tiết sản phẩm
+function OpenProductDetail() {
+    $('.content-container .card-product').click(function () { 
+        window.location = '/product-detail';
+    });
+}

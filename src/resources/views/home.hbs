@@ -18,86 +18,18 @@
                     b4: Khai báo const loginRoute = require('./login')
                         b5: Gọi app.use('/login', loginRoute); --}}
     <div class="content-container">
-        <div class="card-product">
-            <img src="/img/IMG_1566.jpg" alt="" class="product-img">
-            <div class="product-info">
-                <div class="product-heading">Ngày đẹp trời em sẽ đến.</div>
-                <div class="product-price">Giá bán: 
-                    <span class="product-price-value-strikethrough">200.000đ</span>
-                    <span class="product-price-value">150.000đ</span></div>
-                <div class="product-desc">Tác phẩm được sáng tác bởi Tommy, xuất bản ngày 10/08/2021, nội dung nói về </div>
+        {{#each product}}
+            <div class="card-product">
+                <img src="{{images}}" alt="{{title}}" class="product-img">
+                <div class="product-info">
+                    <div class="product-heading">{{title}}</div>
+                    <div class="product-price">Giá bán: 
+                        <span class="product-price-value-strikethrough">{{price}}</span>
+                        <span class="product-price-value">{{price}}</span></div>
+                    <div class="product-desc">{{descriptions}}</div>
+                </div>
             </div>
-        </div>
-        <div class="card-product">
-            <img src="/img/IMG_1566.jpg" alt="" class="product-img">
-            <div class="product-info">
-                <div class="product-heading">Ngày đẹp trời em sẽ đến.</div>
-                <div class="product-price">Giá bán: 
-                    <span class="product-price-value-strikethrough">200.000đ</span>
-                    <span class="product-price-value">150.000đ</span></div>
-                <div class="product-desc">Tác phẩm được sáng tác bởi Tommy, xuất bản ngày 10/08/2021, nội dung nói về</div>
-            </div>
-        </div>
-        <div class="card-product">
-            <img src="/img/IMG_1566.jpg" alt="" class="product-img">
-            <div class="product-info">
-                <div class="product-heading">Ngày đẹp trời em sẽ đến.</div>
-                <div class="product-price">Giá bán: 
-                    <span class="product-price-value-strikethrough">200.000đ</span>
-                    <span class="product-price-value">150.000đ</span></div>
-                <div class="product-desc">Tác phẩm được sáng tác bởi Tommy, xuất bản ngày 10/08/2021, nội dung nói về</div>
-            </div>
-        </div>
-        <div class="card-product">
-            <img src="/img/IMG_1566.jpg" alt="" class="product-img">
-            <div class="product-info">
-                <div class="product-heading">Ngày đẹp trời em sẽ đến.</div>
-                <div class="product-price">Giá bán: 
-                    <span class="product-price-value-strikethrough">200.000đ</span>
-                    <span class="product-price-value">150.000đ</span></div>
-                <div class="product-desc">Tác phẩm được sáng tác bởi Tommy, xuất bản ngày 10/08/2021, nội dung nói về</div>
-            </div>
-        </div>
-        <div class="card-product">
-            <img src="/img/IMG_1566.jpg" alt="" class="product-img">
-            <div class="product-info">
-                <div class="product-heading">Ngày đẹp trời em sẽ đến.</div>
-                <div class="product-price">Giá bán: 
-                    <span class="product-price-value-strikethrough">200.000đ</span>
-                    <span class="product-price-value">150.000đ</span></div>
-                <div class="product-desc">Tác phẩm được sáng tác bởi Tommy, xuất bản ngày 10/08/2021, nội dung nói về</div>
-            </div>
-        </div>
-        <div class="card-product">
-            <img src="/img/IMG_1566.jpg" alt="" class="product-img">
-            <div class="product-info">
-                <div class="product-heading">Ngày đẹp trời em sẽ đến.</div>
-                <div class="product-price">Giá bán: 
-                    <span class="product-price-value-strikethrough">200.000đ</span>
-                    <span class="product-price-value">150.000đ</span></div>
-                <div class="product-desc">Tác phẩm được sáng tác bởi Tommy, xuất bản ngày 10/08/2021, nội dung nói về</div>
-            </div>
-        </div>
-        <div class="card-product">
-            <img src="/img/IMG_1566.jpg" alt="" class="product-img">
-            <div class="product-info">
-                <div class="product-heading">Ngày đẹp trời em sẽ đến.</div>
-                <div class="product-price">Giá bán: 
-                    <span class="product-price-value-strikethrough">200.000đ</span>
-                    <span class="product-price-value">150.000đ</span></div>
-                <div class="product-desc">Tác phẩm được sáng tác bởi Tommy, xuất bản ngày 10/08/2021, nội dung nói về</div>
-            </div>
-        </div>
-        <div class="card-product">
-            <img src="/img/IMG_1566.jpg" alt="" class="product-img">
-            <div class="product-info">
-                <div class="product-heading">Ngày đẹp trời em sẽ đến.</div>
-                <div class="product-price">Giá bán: 
-                    <span class="product-price-value-strikethrough">200.000đ</span>
-                    <span class="product-price-value">150.000đ</span></div>
-                <div class="product-desc">Tác phẩm được sáng tác bởi Tommy, xuất bản ngày 10/08/2021, nội dung nói về</div>
-            </div>
-        </div>
+        {{/each}}
     </div>
     
     <div class="btn-prev-next-page">
